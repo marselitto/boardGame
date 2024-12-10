@@ -27,7 +27,7 @@ public class Board
         for (int i = 0; i < BoardSize / 4; i++)
         {
             int position = GenerateRewards.Next(1, BoardSize);
-            int reward = GenerateRewards.Next(4, 100);
+            int reward = GenerateRewards.Next(1, 7);
         }
         
     }
