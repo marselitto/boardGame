@@ -2,8 +2,17 @@
 
 public class Player
 {
-    public static void Main(string[] args)
+    public string Name { get; set; }
+    public int Position { get; set; }
+    public int Score { get; set; }
+
+    public void Movement(int steps)
     {
-        Console.WriteLine("Hello, World!");
+        Position += steps;
+    }
+
+    public void Update(int points)
+    {
+        Score += points;
     }
 }
