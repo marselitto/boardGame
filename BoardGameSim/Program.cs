@@ -16,3 +16,21 @@ public class Player
         Score += points;
     }
 }
+
+public class Board
+{
+    private int BoardSize;
+
+    private void RandomRewards()
+    {
+        Random GenerateRewards = new Random();
+        for (int i = 0; i < BoardSize / 4; i++)
+        {
+            int position = GenerateRewards.Next(1, BoardSize);
+            int reward = GenerateRewards.Next(4, 100);
+        }
+        
+    }
+
+
+}
