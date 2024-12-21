@@ -20,15 +20,29 @@ public class Player
 public class Board
 {
     private int BoardSize;
+    private Dictionary<int, int> Rewards;
+    
+    public Board(int size)
+    {
+        BoardSize = size;
+        Rewards = new Dictionary<int, int>();
+        GenerateRandomRewards();
+    }
 
-    private void RandomRewards()
+    private void GenerateRandomRewards()
     {
         Random GenerateRewards = new Random();
         for (int i = 0; i < BoardSize / 4; i++)
         {
             int position = GenerateRewards.Next(1, BoardSize);
             int reward = GenerateRewards.Next(1, 7);
+            if (!Rewards.ContainsKey(position))
+            {
+                Rewards.Add(position, reward);
+                Console.WriteLine($"Nagroda: {reward} pkt zostala dodana na polu {position}.");
+            }
         }
+        
         
     }
 

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BoardGameSim
-build_property.ProjectDir = /home/kuba3/RiderProjects/BoardGameSim/BoardGameSim/
+build_property.ProjectDir = C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
