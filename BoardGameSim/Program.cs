@@ -15,6 +15,13 @@ public class Player
     {
         Score += points;
     }
+    
+    public Player(string name)
+    {
+        Name = name;
+        Position = 0;
+        Score = 0;
+    }
 }
 
 public class Board
@@ -154,6 +161,29 @@ public class Healer : IPlayerType
     {
         player.Update(3);
         Console.WriteLine($"{player.Name} zdobył 3 punkty za leczenie!");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        List<Player> players = new List<Player>
+        {
+            new Player("Gracz 1"),
+            new Player("Gracz 2"),
+            new Player("Gracz 3")
+        };
+
+        List<IPlayerType> playerTypes = new List<IPlayerType>
+        {
+            new Warrior(),
+            new Mage(),
+            new Healer()
+        };
+
+        Game game = new Game(20, players, playerTypes);
+        game.Start();
     }
 }
 
