@@ -139,6 +139,23 @@ public class Warrior : IPlayerType
         Console.WriteLine($"{player.Name} zdobył 5 dodatkowych punktów za walkę!");
     }
 }
+public class Mage : IPlayerType
+{
+    public void SpecialAbility(Player player, Board board)
+    {
+        Console.WriteLine($"{player.Name} rzuca zaklęcie na planszę!");
+        board.ModifyRewards(3);
+    }
+}
+
+public class Healer : IPlayerType
+{
+    public void SpecialAbility(Player player, Board board)
+    {
+        player.Update(3);
+        Console.WriteLine($"{player.Name} zdobył 3 punkty za leczenie!");
+    }
+}
 
 
 
