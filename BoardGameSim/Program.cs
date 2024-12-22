@@ -42,9 +42,19 @@ public class Board
                 Console.WriteLine($"Nagroda: {reward} pkt zostala dodana na polu {position}.");
             }
         }
-        
-        
+    }
+    public int CheckReward(int position)
+    {
+        return Rewards.ContainsKey(position) ? Rewards[position] : 0;
     }
 
-
+    public void ModifyRewards(int modifier)
+    {
+        foreach (var key in Rewards.Keys)
+        {
+            Rewards[key] += modifier;
+        }
+        Console.WriteLine("Nagrody na planszy zostały zmodyfikowane.");
+    }
 }
+
