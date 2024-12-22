@@ -26,7 +26,7 @@ public class Player
 
 public class Board
 {
-    private int BoardSize;
+    public int BoardSize;
     private Dictionary<int, int> Rewards;
     
     public Board(int size)

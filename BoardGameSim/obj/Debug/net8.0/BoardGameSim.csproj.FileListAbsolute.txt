@@ -1,0 +1,15 @@
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\obj\Debug\net8.0\BoardGameSim.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\obj\Debug\net8.0\BoardGameSim.AssemblyInfoInputs.cache
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\obj\Debug\net8.0\BoardGameSim.AssemblyInfo.cs
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\obj\Debug\net8.0\BoardGameSim.csproj.CoreCompileInputs.cache
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\obj\Debug\net8.0\BoardGameSim.sourcelink.json
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\bin\Debug\net8.0\BoardGameSim.exe
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\bin\Debug\net8.0\BoardGameSim.deps.json
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\bin\Debug\net8.0\BoardGameSim.runtimeconfig.json
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\bin\Debug\net8.0\BoardGameSim.dll
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\bin\Debug\net8.0\BoardGameSim.pdb
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\obj\Debug\net8.0\BoardGameSim.dll
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\obj\Debug\net8.0\refint\BoardGameSim.dll
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\obj\Debug\net8.0\BoardGameSim.pdb
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\obj\Debug\net8.0\BoardGameSim.genruntimeconfig.cache
+C:\Users\jawor\RiderProjects\boardGame\BoardGameSim\obj\Debug\net8.0\ref\BoardGameSim.dll
