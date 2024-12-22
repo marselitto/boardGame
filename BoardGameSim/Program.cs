@@ -99,13 +99,13 @@ public class Game
         
         Random random = new Random();
         int steps = random.Next(1, 7);
-        currentPlayer.Move(steps);
+        currentPlayer.Movement(steps);
         Console.WriteLine($"{currentPlayer.Name} przesuwa się o {steps} pola, pozycja: {currentPlayer.Position}.");
 
         int reward = board.CheckReward(currentPlayer.Position);
         if (reward > 0)
         {
-            currentPlayer.UpdateScore(reward);
+            currentPlayer.Update(reward);
             OnRewardCollected?.Invoke(currentPlayer, reward);
         }
 
@@ -126,4 +126,19 @@ public class Game
         }
     }
 }
+public interface IPlayerType
+{
+    void SpecialAbility(Player player, Board board);
+}
+
+public class Warrior : IPlayerType
+{
+    public void SpecialAbility(Player player, Board board)
+    {
+        player.Update(5);
+        Console.WriteLine($"{player.Name} zdobył 5 dodatkowych punktów za walkę!");
+    }
+}
+
+
 
