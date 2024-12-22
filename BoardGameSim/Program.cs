@@ -58,3 +58,72 @@ public class Board
     }
 }
 
+public class Game
+{
+    private Board board;
+    private List<Player> players;
+    private List<IPlayerType> playerTypes;
+    private int currentPlayerIndex;
+
+    public event Action<Player, int> OnRewardCollected;
+
+    public Game(int boardSize, List<Player> playersList, List<IPlayerType> playerTypesList)
+    {
+        board = new Board(boardSize);
+        players = playersList;
+        playerTypes = playerTypesList;
+        currentPlayerIndex = 0;
+
+        OnRewardCollected += (player, reward) =>
+        {
+            Console.WriteLine($"{player.Name} zebrał nagrodę: {reward} pkt!");
+        };
+    }
+
+    public void Start()
+    {
+        Console.WriteLine("Gra rozpoczyna się!");
+        while (!IsGameOver())
+        {
+            TakeTurn();
+            currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+        }
+        DisplayResults();
+    }
+
+    private void TakeTurn()
+    {
+        Player currentPlayer = players[currentPlayerIndex];
+        IPlayerType currentType = playerTypes[currentPlayerIndex];
+        Console.WriteLine($"\nTura gracza: {currentPlayer.Name}");
+        
+        Random random = new Random();
+        int steps = random.Next(1, 7);
+        currentPlayer.Move(steps);
+        Console.WriteLine($"{currentPlayer.Name} przesuwa się o {steps} pola, pozycja: {currentPlayer.Position}.");
+
+        int reward = board.CheckReward(currentPlayer.Position);
+        if (reward > 0)
+        {
+            currentPlayer.UpdateScore(reward);
+            OnRewardCollected?.Invoke(currentPlayer, reward);
+        }
+
+        currentType.SpecialAbility(currentPlayer, board);
+    }
+
+    private bool IsGameOver()
+    {
+        return players.Exists(p => p.Position >= board.BoardSize);
+    }
+
+    private void DisplayResults()
+    {
+        Console.WriteLine("\nGra zakończona! Wyniki:");
+        foreach (var player in players)
+        {
+            Console.WriteLine($"{player.Name} - Punkty: {player.Score}");
+        }
+    }
+}
+
